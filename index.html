@@ -6,7 +6,7 @@
   <title>Pixel Raptors — Innovating. Engineering. Evolving.</title>
   <meta name="theme-color" content="#081018" />
   <link rel="stylesheet" href="assets/css/mega.css" />
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="assets/images/logo.jpg" />
 </head>
 <body class="landing">
 
@@ -21,7 +21,7 @@
   <header class="site-header minimal">
     <a class="brand" href="index.html">
       <img src="assets/images/logo.jpg" alt="Pixel Raptors logo" />
-      <span>Pixel Raptors - FTC 28395</span>
+      <span>Pixel Raptors</span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a class="nav__link" href="robot.html">Robot</a>
@@ -52,6 +52,11 @@
 
       <p class="eyebrow">FTC Team 28395</p>
 
+      <div class="visitor-counter">
+        <span>Visitors:</span>
+        <span id="visitor-count">0</span>
+      </div>
+
       <div class="cta-row">
         <a class="button magnetic" href="robot.html">Enter Site</a>
         <a class="button button--ghost magnetic" href="support.html">Support Us</a>
@@ -63,7 +68,7 @@
     <section class="flyin reveal">
       <div class="fly-grid">
         <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 1">
-        <img class="fly tilt" src="assets/images/membersTesting.jpg" alt="2 Team Members Testing">
+        <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 2">
         <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 3">
         <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 4">
       </div>
@@ -71,6 +76,40 @@
   </main>
 
   <footer class="landing-footer tiny">© <span id="year"></span> Pixel Raptors Robotics</footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
   <script src="assets/js/mega.js"></script>
+  <script>
+    // Replace with your Firebase config
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    const visitorRef = database.ref('visitors');
+
+    // Check if visited before (persistent across sessions)
+    if (!localStorage.getItem('visited')) {
+      visitorRef.transaction((current) => (current || 0) + 1);
+      localStorage.setItem('visited', 'true');
+    }
+
+    // Display and animate count
+    visitorRef.on('value', (snapshot) => {
+      const count = snapshot.val() || 0;
+      const countUp = new CountUp('visitor-count', count, { duration: 2 });
+      if (!countUp.error) {
+        countUp.start();
+      }
+    });
+  </script>
 </body>
 </html>
