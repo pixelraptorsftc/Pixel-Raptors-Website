@@ -191,6 +191,27 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
 }
 .contact-form textarea { resize: vertical; min-height: 120px; }
 
+.progress-container {
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 10px;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon), hsl(var(--hue) 100% 70%));
+  box-shadow: 0 0 15px var(--neon-soft), inset 0 0 10px var(--neon-soft);
+  transition: width 2s ease-out;
+  animation: pulseGlow 2s infinite alternate;
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px var(--neon-soft); }
+  100% { box-shadow: 0 0 20px var(--neon); }
+}
+
 @media (max-width:900px){
   .nav{position:fixed; inset:var(--header-h) 0 auto 0; background:rgba(8,12,18,.96); padding:22px; gap:8px; flex-direction:column; transform:translateY(-120%); transition:transform .35s ease; border-bottom:1px solid rgba(255,255,255,.06)}
   .nav.open{transform:translateY(0)} .burger{display:block; margin-left:auto}
@@ -204,4 +225,5 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
   .orb{animation:none}
   .card.float-in{animation:none}
   .page-hero h1{animation:none}
+  .progress-bar{animation:none}
 }

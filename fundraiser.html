@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fundraisers • Pixel Raptors</title>
   <link rel="stylesheet" href="assets/css/mega.css" />
+  <link rel="icon" href="assets/images/logo.jpg" />
 </head>
 <body class="subpage">
   <div class="transition cover" aria-hidden="true"></div>
@@ -33,12 +34,20 @@
   <main>
     <section class="page-hero reveal">
       <h1>Current Fundraisers</h1>
-      <p>Add active campaigns here with donate links and progress bars.</p>
+      <p>Support our team by donating to our active campaign</p>
     </section>
 
     <section class="content reveal">
       <div class="card-grid">
-        <article class="card float-in"><h3>COMING SOON!</h3><p>COMING SOON!</p></article>
+        <article class="card float-in">
+          <h3>Donate to Our Cause</h3>
+          <p id="raised-text">Raised $0 of $1,500 goal</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar" style="width: 0%; background: var(--neon); box-shadow: 0 0 10px var(--neon-soft);"></div>
+          </div>
+          <p id="donors-text">0 Donors</p>
+          <a class="button magnetic" href="https://secure.givelively.org/donate/washington-first-robotics/indika-widanalage" target="_blank">Donate Now</a>
+        </article>
       </div>
     </section>
   </main>
@@ -48,5 +57,16 @@
   </footer>
 
   <script src="assets/js/mega.js"></script>
+  <script>
+    // Note: For dynamic update, a server-side script or API is recommended as client-side scraping has limitations (CORS). Hardcoding current values for now.
+    const raised = 0; // Update this value manually or via backend
+    const goal = 1500;
+    const donors = 0;
+    const percentage = (raised / goal) * 100;
+
+    document.getElementById('raised-text').textContent = `Raised $${raised} of $${goal} goal`;
+    document.getElementById('progress-bar').style.width = `${percentage}%`;
+    document.getElementById('donors-text').textContent = `${donors} Donors`;
+  </script>
 </body>
 </html>
