@@ -227,3 +227,8 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
   .page-hero h1{animation:none}
   .progress-bar{animation:none}
 }
+
+.mailin-donations {
+    padding: 10px;
+
+}
