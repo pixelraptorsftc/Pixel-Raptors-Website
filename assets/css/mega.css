@@ -232,3 +232,8 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
     padding: 10px;
 
 }
+
+.team-pic {
+height : 35%;
+width : 35%;
+}
