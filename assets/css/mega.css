@@ -233,7 +233,12 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
 
 }
 
-.team-pic {
-height : 35%;
-width : 35%;
+.team-pic-adjust1 {
+height : 120%;
+width : 200%;
+}
+
+.team-pic-adjust2 {
+height : 95%;
+width : 200%;
 }
