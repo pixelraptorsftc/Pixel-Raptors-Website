@@ -229,16 +229,23 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
 }
 
 .mailin-donations {
-    padding: 10px;
-
+  padding: 10px;
 }
 
 .team-pic-adjust1 {
-height : 120%;
-width : 200%;
+  height : 120%;
+  width : 200%;
 }
 
 .team-pic-adjust2 {
-height : 95%;
-width : 200%;
+  height : 300px;
+  width : 500px;
+}
+
+.image-adjust1 {
+  padding: 10px;
+  height : 10%;
+  width : 100%;
+}
+
 }
