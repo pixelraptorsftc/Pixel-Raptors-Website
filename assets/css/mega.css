@@ -242,10 +242,13 @@ section{padding:min(9vw,96px) clamp(18px,3vw,42px); perspective: 1000px;}
   width : 500px;
 }
 
-.image-adjust1 {
-  padding: 10px;
-  height : 10%;
-  width : 100%;
+.cashapp-image-adjust {
+  padding: 5px;
+  height : 500px;
+  width : 800px;
 }
 
+.cashapp-div-adjust {
+  position: relative;
+  top: -75px
 }
