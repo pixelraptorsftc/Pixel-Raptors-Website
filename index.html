@@ -1,115 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pixel Raptors — Innovating. Engineering. Evolving.</title>
-  <meta name="theme-color" content="#081018" />
-  <link rel="stylesheet" href="assets/css/mega.css" />
-  <link rel="icon" href="assets/images/logo.jpg" />
+    <meta charset="UTF-8" />
+    <title>Pixel Raptors — Innovating. Engineering. Evolving.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+            name="description"
+            content="Pixel Raptors FTC Team 28395 — Innovating. Engineering. Evolving."
+    />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="landing">
+<body>
+<header class="nav">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <div class="brand-logo">
+                <img src="images/logo.png" alt="Pixel Raptors logo" />
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Pixel Raptors</span>
+                <span class="brand-subtitle">FTC Team 28395</span>
+            </div>
+        </a>
 
-  <div class="transition cover active" aria-hidden="true"></div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
 
-  <canvas id="wavefield" aria-hidden="true"></canvas>
-  <canvas id="ribbon" aria-hidden="true"></canvas>
-  <canvas id="sparks" aria-hidden="true"></canvas>
-  <div class="orb orb-a" aria-hidden="true"></div>
-  <div class="orb orb-b" aria-hidden="true"></div>
+        <ul class="nav-links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="robot.html">Robot</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="fundraiser.html">Fundraiser</a></li>
+            <li><a href="contact.html">Support</a></li>
+        </ul>
+    </div>
+</header>
 
-  <header class="site-header minimal">
-    <a class="brand" href="index.html">
-      <img src="assets/images/logo.jpg" alt="Pixel Raptors logo" />
-      <span>Pixel Raptors</span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a class="nav__link" href="robot.html">Robot</a>
-      <a class="nav__link" href="team.html">Team</a>
-      <a class="nav__link" href="awards.html">Awards</a>
-      <a class="nav__link" href="fundraiser.html">Fundraiser</a>
-      <a class="nav__cta" href="support.html">Support</a>
-      <span class="nav__rail"></span>
-      <span class="nav__glow" aria-hidden="true"></span>
-    </nav>
-    <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="scroll-bar" aria-hidden="true"><span></span></div>
-  </header>
+<main class="wrapper">
+    <section class="hero">
+        <div class="hero-card">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span>Innovating · Engineering · Evolving</span>
+            </div>
 
-  <main>
-    <section class="hero hero--center reveal in">
-      <figure class="logo-stack parallax tilt">
-        <img class="logo-hero" src="assets/images/logo.jpg" alt="Pixel Raptors" />
-        <div class="ring ring-1"></div>
-        <div class="ring ring-2"></div>
-        <div class="ring ring-3"></div>
-      </figure>
+            <h1 class="hero-title">Pixel Raptors Robotics</h1>
 
-      <h1 class="big-title">
-        Pixel Raptors Robotics
-        <span class="word-cycle" data-words='["Innovating.","Engineering.","Evolving."]'></span>
-      </h1>
+            <p class="hero-subtitle">
+                A student-run FIRST Tech Challenge team designing, building, and
+                programming robots from the ground up.
+            </p>
 
-      <p class="eyebrow">FTC Team 28395</p>
+            <p class="hero-meta">
+                Based in Washington State · FTC <strong>Team 28395</strong>
+            </p>
 
-      <div class="visitor-counter">
-        <span>Visitors:</span>
-        <span id="visitor-count">0</span>
-      </div>
+            <div class="hero-actions">
+                <a href="robot.html" class="btn btn-primary">Meet the Robot</a>
+                <a href="fundraiser.html" class="btn btn-secondary">Support the Team</a>
+            </div>
 
-      <div class="cta-row">
-        <a class="button magnetic" href="robot.html">Enter Site</a>
-        <a class="button button--ghost magnetic" href="support.html">Support Us</a>
-      </div>
+            <div class="hero-stat-row">
+                <span>Season: FTC DECODE</span>
+            </div>
+        </div>
 
-      <div class="scroll-hint bounce">Scroll</div>
+        <div class="hero-logo-shell" aria-hidden="true">
+            <div class="hero-logo-inner">
+                <img src="images/logo.png" alt="" />
+            </div>
+        </div>
     </section>
 
-    <section class="flyin reveal">
-      <div class="fly-grid">
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 1">
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 2">
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 3">
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Robot 4">
-      </div>
+    <section>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">
+            Pixel Raptors combines mechanical design, software, and teamwork to compete
+            in the <strong>FIRST Tech Challenge</strong>. We prototype quickly, iterate
+            often, and treat every match as data.
+        </p>
+
+        <div class="grid grid-3">
+            <article class="card">
+                <span class="tag-chip">Engineering</span>
+                <h3>Robot Design &amp; Build</h3>
+                <p>
+                    From mecanum drive to complex scoring mechanisms, our robots are
+                    designed for agility, reliability, and continuous improvement.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag-chip">Software</span>
+                <h3>Autonomous &amp; Control</h3>
+                <p>
+                    We write our own control software, exploring vision, advanced
+                    pathfinding, and robust tele-op code for consistent performance.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag-chip">Community</span>
+                <h3>Outreach &amp; Impact</h3>
+                <p>
+                    Beyond the field, we share robotics with our community through demos,
+                    outreach, and mentoring future teams.
+                </p>
+            </article>
+        </div>
     </section>
-  </main>
+</main>
 
-  <footer class="landing-footer tiny">© <span id="year"></span> Pixel Raptors Robotics</footer>
+<footer class="footer">
+    <div class="footer-inner">
+        <span>© Pixel Raptors Robotics — FTC 28395</span>
+        <span>FIRST Tech Challenge · Washington</span>
+    </div>
+</footer>
 
-  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
-  <script src="assets/js/mega.js"></script>
-  <script>
-    // Replace with my Firebase config
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-      databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
-    const visitorRef = database.ref('visitors');
-
-    // Check if visited before (persistent across sessions)
-    if (!localStorage.getItem('visited')) {
-      visitorRef.transaction((current) => (current || 0) + 1);
-      localStorage.setItem('visited', 'true');
-    }
-
-    // Display and animate count
-    visitorRef.on('value', (snapshot) => {
-      const count = snapshot.val() || 0;
-      const countUp = new CountUp('visitor-count', count, { duration: 2 });
-      if (!countUp.error) {
-        countUp.start();
-      }
-    });
-  </script>
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,82 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Robot • Pixel Raptors</title>
-  <link rel="stylesheet" href="assets/css/mega.css" />
-  <link rel="icon" href="assets/images/logo.jpg" />
+    <meta charset="UTF-8" />
+    <title>Meet the Robot • Pixel Raptors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+            name="description"
+            content="Learn about the Pixel Raptors FTC robot: key systems, specifications, and gallery."
+    />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="subpage">
-  <div class="transition cover active" aria-hidden="true"></div>
+<body>
+<header class="nav">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <div class="brand-logo">
+                <img src="images/logo.png" alt="Pixel Raptors logo" />
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Pixel Raptors</span>
+                <span class="brand-subtitle">FTC Team 28395</span>
+            </div>
+        </a>
 
-  <canvas id="wavefield" aria-hidden="true"></canvas>
-  <canvas id="ribbon" aria-hidden="true"></canvas>
-  <canvas id="sparks" aria-hidden="true"></canvas>
-  <div class="orb orb-a" aria-hidden="true"></div>
-  <div class="orb orb-b" aria-hidden="true"></div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
 
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/images/logo.jpg" alt="" /><span>Pixel Raptors - FTC 28395</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a class="nav__link is-active" href="robot.html">Robot</a>
-      <a class="nav__link" href="team.html">Team</a>
-      <a class="nav__link" href="awards.html">Awards</a>
-      <a class="nav__link" href="fundraiser.html">Fundraiser</a>
-      <a class="nav__cta" href="support.html">Support</a>
-      <span class="nav__rail"></span>
-      <span class="nav__glow" aria-hidden="true"></span>
-    </nav>
-    <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="scroll-bar" aria-hidden="true"><span></span></div>
-  </header>
-
-  <main>
-    <section class="page-hero reveal">
-      <h1>Meet the Robot</h1>
-      <p>Agility, reliability, iteration.</p>
-    </section>
-
-    <section class="content two-col reveal">
-      <div>
-        <h2>Key Systems</h2>
-        <ul class="checks">
-          <li>Mecanum drive allowing for omnidirectional movement</li>
-          <li>(Soon to be) Advanced pathfinding for autonomous navigation</li>
-          <li>(Soon to be) Limelight vision </li>
-          <li>(Sonn to be) Complex indexer to sort artifacts for maximum amount of points</li>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="robot.html" aria-current="page">Robot</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="fundraiser.html">Fundraiser</a></li>
+            <li><a href="contact.html">Support</a></li>
         </ul>
-      </div>
-      <figure class="media-card parallax tilt">
-        <img src="assets/images/robot.jpg" alt="FTC Robot" />
-      </figure>
+    </div>
+</header>
+
+<main class="wrapper">
+    <section>
+        <h1 class="section-title">Meet the Robot</h1>
+        <p class="section-subtitle">
+            Agility, reliability, iteration. Every subsystem is built with the season
+            game in mind and refined through testing.
+        </p>
+
+        <div class="grid grid-2">
+            <article class="card">
+                <h2>Key Systems</h2>
+                <ul class="bullet-list">
+                    <li>Mecanum drive for smooth, omnidirectional movement</li>
+                    <li>(In development) Advanced pathfinding for autonomous navigation</li>
+                    <li>(In development) Limelight vision for precise targeting</li>
+                    <li>
+                        (In development) Complex indexer to manage artifacts and score
+                        efficiently
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>Specifications</h2>
+                <ul class="spec-list">
+                    <li><strong>Drive:</strong> Mecanum</li>
+                    <li><strong>Motors:</strong> GoBILDA</li>
+                    <li><strong>Controller:</strong> REV Control Hub</li>
+                    <li><strong>Vision:</strong> Limelight Camera</li>
+                    <li><strong>Autonomy:</strong> Vision + Pathfinding</li>
+                </ul>
+            </article>
+        </div>
     </section>
 
-    <section class="specs reveal">
-      <h2>Specifications</h2>
-      <div class="specs__grid">
-        <div class="spec"><span>Drive: </span><strong>Mecanum</strong></div>
-        <div class="spec"><span>Motors: </span><strong>GoBILDA</strong></div>
-        <div class="spec"><span>Controller: </span><strong>REV Control Hub</strong></div>
-        <div class="spec"><span>Vision: </span><strong>Limelight Camera</strong></div>
-        <div class="spec"><span>Autonomy: </span><strong>Vision + Pathfinding</strong></div>
-      </div>
-    </section>
+    <section>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">
+            A closer look at our mechanisms, wiring, and test setups.
+        </p>
 
-    <section class="gallery reveal">
-      <h2>Gallery</h2>
-      <div class="gallery__grid">
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Close-up" />
-        <img class="fly tilt" src="assets/images/membersTesting.jpg" alt="2 Team Members Testing the Output Mechanism" />
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Mechanism detail" />
-        <img class="fly tilt" src="assets/images/robot.jpg" alt="Electronics" />
-      </div>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="images/team-1.jpg" alt="FTC robot full view" />
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/team-2.jpg" alt="Team members testing the robot" />
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/team-3.jpg" alt="Team members testing the robot" />
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/team-4.JPG" alt="Electronics and wiring close-up" />
+            </figure>
+        </div>
     </section>
-  </main>
+</main>
 
-  <footer class="site-footer">
-    <p class="tiny">© <span id="year"></span> Pixel Raptors Robotics — FTC 28395</p>
-  </footer>
-  <script src="assets/js/mega.js"></script>
+<footer class="footer">
+    <div class="footer-inner">
+        <span>© Pixel Raptors Robotics — FTC 28395</span>
+    </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>

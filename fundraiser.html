@@ -1,87 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fundraisers • Pixel Raptors</title>
-  <link rel="stylesheet" href="assets/css/mega.css" />
-  <link rel="icon" href="assets/images/logo.jpg" />
+    <meta charset="UTF-8" />
+    <title>Fundraisers • Pixel Raptors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+            name="description"
+            content="Current fundraisers and ways to financially support the Pixel Raptors FTC team."
+    />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="subpage">
-  <div class="transition cover" aria-hidden="true"></div>
+<body>
+<header class="nav">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <div class="brand-logo">
+                <img src="images/logo.png" alt="Pixel Raptors logo" />
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Pixel Raptors</span>
+                <span class="brand-subtitle">FTC Team 28395</span>
+            </div>
+        </a>
 
-  <canvas id="wavefield" aria-hidden="true"></canvas>
-  <canvas id="ribbon" aria-hidden="true"></canvas>
-  <canvas id="sparks" aria-hidden="true"></canvas>
-  <div class="orb orb-a" aria-hidden="true"></div>
-  <div class="orb orb-b" aria-hidden="true"></div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
 
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/images/logo.jpg" alt="" /><span>Pixel Raptors - FTC 28395</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a class="nav__link" href="robot.html">Robot</a>
-      <a class="nav__link" href="team.html">Team</a>
-      <a class="nav__link" href="awards.html">Awards</a>
-      <a class="nav__link is-active" href="fundraiser.html">Fundraiser</a>
-      <a class="nav__cta" href="support.html">Support</a>
-      <span class="nav__rail"></span>
-      <span class="nav__glow" aria-hidden="true"></span>
-    </nav>
-    <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="scroll-bar" aria-hidden="true"><span></span></div>
-  </header>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="robot.html">Robot</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="fundraiser.html" aria-current="page">Fundraiser</a></li>
+            <li><a href="contact.html">Support</a></li>
+        </ul>
+    </div>
+</header>
 
-  <main>
-    <section class="page-hero reveal">
-      <h1>Current Fundraisers</h1>
-      <p>Support our team by donating to our active campaign- Note that all donations are tax deductible, as FIRST WA is a 501c3.
-      </p>
-    </section>
+<main class="wrapper">
+    <section>
+        <h1 class="section-title">Current Fundraisers</h1>
+        <p class="section-subtitle">
+            Your support keeps our students designing, machining, coding, and
+            competing. All donations go directly toward tools, parts, event fees, and
+            outreach.
+        </p>
 
-    <section class="content 2-col reveal">
-      <div class="card-grid">
-        <article class="card float-in">
-          <h3>Donate to Our Cause</h3>
-<!--          <p id="raised-text">Raised $0 of $1,500 goal</p>-->
-<!--          <div class="progress-container">-->
-<!--            <div class="progress-bar" id="progress-bar" style="width: 0%; background: var(&#45;&#45;neon); box-shadow: 0 0 10px var(&#45;&#45;neon-soft);"></div>-->
-<!--          </div>-->
-<!--          <p id="donors-text">0 Donors</p>-->
-          <a class="button magnetic" href="https://secure.givelively.org/donate/washington-first-robotics/indika-widanalage" target="_blank">Donate Online</a>
-          <br/>
-          <div class="mailin-donations">Donation checks can also be mailed to the FIRST Washington HQ office in Kent – be sure to include instructions with our team number <b>28395</b>
-            <pre>
-            FIRST Washington
-            22426 72nd Ave S.  Kent  WA  98032
-          </pre>
-          </div>
+        <article class="card">
+            <h2>Donate to Our Cause</h2>
+            <p>
+                Support our team by donating to our active campaign. FIRST Washington is
+                a <strong>501(c)(3)</strong> organization, so donations are typically
+                tax-deductible—please consult your tax professional for details.
+            </p>
 
+            <p>
+                <a
+                        class="btn btn-primary"
+                        href="https://secure.givelively.org/donate/washington-first-robotics/indika-widanalage"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                >Donate Online</a
+                >
+            </p>
+
+            <p>
+                Donation checks can also be mailed to the FIRST Washington HQ office in
+                Kent. Be sure to include our team number <strong>28395</strong> in the
+                memo line or attached note.
+            </p>
+
+            <address>
+                FIRST Washington<br />
+                22426 72nd Ave S.<br />
+                Kent, WA 98032
+            </address>
         </article>
-      </div>
-      
-      <div class="flyin reveal, cash-app-div-adjust">
-        <figure class="media-card parallax tilt">
-          <img class="fly tilt cashapp-image-adjust" src="assets/images/PixelRaptorsvenmo.png" alt="Our Cash App"/>
-        </figure>
-      </div>
+
+        <article class="card">
+            <h2>Other Ways to Help</h2>
+            <ul class="bullet-list">
+                <li>Company sponsorships and matching gift programs</li>
+                <li>In-kind donations of tools, materials, or machining time</li>
+                <li>Hosting demos, outreach events, or practice space</li>
+            </ul>
+            <p>
+                If you’re interested in becoming a sponsor or partnering on a fundraiser,
+                please reach out through our
+                <a href="contact.html">Support &amp; Contact</a> page.
+            </p>
+        </article>
+        <article class="card">
+            <h2>Cash Donations</h2>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="images/cashapp.png" alt="Pixel Raptors Cash App QR Ccode" />
+                </figure>
+                <figure class="gallery-item">
+                </figure>
+            </div>
+        </article>
     </section>
-  </main>
+</main>
 
-  <footer class="site-footer">
-    <p class="tiny">© <span id="year"></span> Pixel Raptors Robotics — FTC 28395</p>
-  </footer>
+<footer class="footer">
+    <div class="footer-inner">
+        <span>© Pixel Raptors Robotics — FTC 28395</span>
+    </div>
+</footer>
 
-  <script src="assets/js/mega.js"></script>
-  <script>
-    // Note: For dynamic update, a server-side script or API is recommended as client-side scraping has limitations (CORS). Hardcoding current values for now.
-    const raised = 0; // Update this value manually or via backend
-    const goal = 1500;
-    const donors = 0;
-    const percentage = (raised / goal) * 100;
-
-    document.getElementById('raised-text').textContent = `Raised $${raised} of $${goal} goal`;
-    document.getElementById('progress-bar').style.width = `${percentage}%`;
-    document.getElementById('donors-text').textContent = `${donors} Donors`;
-  </script>
+<script src="main.js"></script>
 </body>
 </html>
