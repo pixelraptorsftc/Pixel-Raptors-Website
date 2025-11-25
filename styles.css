@@ -525,10 +525,16 @@ textarea {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    display:none;
   }
 
   .nav-links.open {
     max-height: 260px;
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0;
   }
 
   .hero {
@@ -554,5 +560,22 @@ textarea {
     flex-direction: column;
     align-items: stretch;
   }
+}
+.grid {
+    display: grid;
+    gap: 2rem;
+    align-items: stretch; /* <-- Makes all boxes equal height */
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background: #0a1020;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;          /* <-- Helps balance card spacing */
+    flex-direction: column;
 }
 
