@@ -593,11 +593,15 @@ textarea {
 }
 
 .team-photo {
-    aspect-ratio: 2 / 1;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--color-border);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
+.team-OutreachLibrary {
+    aspect-ratio: 2 / 1;
+    margin: 0.5rem;
+}
 
